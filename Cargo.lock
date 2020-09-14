@@ -2424,6 +2424,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "pong-game"
+version = "0.1.0"
+dependencies = [
+ "amethyst",
+ "log",
+ "serde",
+]
+
+[[package]]
 name = "ppv-lite86"
 version = "0.2.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3363,15 +3372,6 @@ name = "shrev"
 version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b5752e017e03af9d735b4b069f53b7a7fd90fefafa04d8bd0c25581b0bff437f"
-
-[[package]]
-name = "simbus-game"
-version = "0.1.0"
-dependencies = [
- "amethyst",
- "log",
- "serde",
-]
 
 [[package]]
 name = "siphasher"

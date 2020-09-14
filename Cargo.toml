@@ -1,5 +1,5 @@
 [package]
-name = "simbus-game"
+name = "pong-game"
 version = "0.1.0"
 authors = ["Milan Jaric <milan.jaric@gmail.com>"]
 edition = "2018"
