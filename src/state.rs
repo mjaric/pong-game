@@ -8,12 +8,24 @@ use crate::{
     constants::{ARENA_WIDTH, ARENA_HEIGHT}
 };
 use amethyst::{
-    assets::Handle,
-    core::transform::Transform,
+    assets::{Handle, Loader},
+    core::{transform::Transform, ecs::Entity},
     prelude::*,
     renderer::Camera,
-    renderer::SpriteSheet
+    renderer::SpriteSheet,
+    ui::{Anchor, LineMode, TtfFormat, UiText, UiTransform},
 };
+
+#[derive(Default)]
+pub struct ScoreBoard {
+    pub score_left: i32,
+    pub score_right: i32
+}
+
+pub struct ScoreText {
+    pub left_player_score: Entity,
+    pub right_player_score: Entity,
+}
 
 pub struct Pong;
 
@@ -27,6 +39,7 @@ impl SimpleState for Pong {
         initialize_ball(world, sprite_sheet_handle.clone());
         initialize_paddles(world, sprite_sheet_handle);
         initialize_camera(world);
+        initialize_scoreboard(world);
     }
 }
 
@@ -39,4 +52,45 @@ fn initialize_camera(world: &mut World) {
         .with(Camera::standard_2d(ARENA_WIDTH, ARENA_HEIGHT))
         .with(transform)
         .build();
+}
+
+fn initialize_scoreboard(world: &mut World) {
+    let font = world.read_resource::<Loader>()
+        .load("font/square.ttf", TtfFormat, (), &world.read_resource());
+    let left_transform = UiTransform::new(
+        "Player 1".to_string(), Anchor::TopMiddle, Anchor::TopMiddle,
+        -50.0, -50.0, 1.0, 200.0, 50.0
+    );
+    let right_transform = UiTransform::new(
+        "Player 1".to_string(), Anchor::TopMiddle, Anchor::TopMiddle,
+        50.0, -50.0, 1.0, 200.0, 50.0
+    );
+
+    let left_player_score = world
+        .create_entity()
+        .with(left_transform)
+        .with(UiText::new(
+            font.clone(),
+            "0".to_string(),
+            [1.0, 1.0, 1.0, 1.0],
+            50.0,
+            LineMode::Single,
+            Anchor::Middle
+        ))
+        .build();
+
+    let right_player_score = world
+        .create_entity()
+        .with(right_transform)
+        .with(UiText::new(
+            font,
+            "0".to_string(),
+            [1.0, 1.0, 1.0, 1.0],
+            50.0,
+            LineMode::Single,
+            Anchor::Middle
+        ))
+        .build();
+
+    world.insert(ScoreText {left_player_score, right_player_score});
 }
