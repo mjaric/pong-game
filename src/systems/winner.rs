@@ -1,19 +1,13 @@
 use amethyst::{
     core::transform::Transform,
-    core::SystemDesc,
     derive::SystemDesc,
-    ecs::{ReadExpect, Join, System, SystemData, World, Write, WriteStorage},
+    ecs::{ReadExpect, Join, System, SystemData, Write, WriteStorage},
     ui::UiText,
 };
-
-use crate::components::Ball;
-use crate::state::{ScoreBoard, ScoreText};
-use crate::constants::{
-    ARENA_WIDTH,
-    ARENA_HEIGHT,
-    BALL_RADIUS,
-    BALL_VELOCITY_X,
-    BALL_VELOCITY_Y,
+use crate::{
+    components::Ball,
+    ui::{ScoreBoard, ScoreText},
+    constants::{ARENA_WIDTH, ARENA_HEIGHT},
 };
 
 #[derive(SystemDesc)]

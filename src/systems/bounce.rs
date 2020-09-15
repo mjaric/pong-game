@@ -1,10 +1,8 @@
 use amethyst::{
-    core::{Transform, SystemDesc},
-    derive::{SystemDesc},
-    ecs::{Join, ReadStorage, SystemData, System, World, WriteStorage},
+    core::Transform,
+    ecs::{Join, ReadStorage, System, WriteStorage},
 };
 use crate::{
-    state::Pong,
     components::{Ball, Side, Paddle},
     constants::{ARENA_HEIGHT}
 };

@@ -1,9 +1,8 @@
 use amethyst::{
-    core::SystemDesc,
     core::transform::Transform,
     core::timing::Time,
     derive::SystemDesc,
-    ecs::{Join, Read, ReadStorage, System, SystemData, World, WriteStorage}
+    ecs::{Join, Read, ReadStorage, System, SystemData, WriteStorage}
 };
 use crate::components::Ball;
 

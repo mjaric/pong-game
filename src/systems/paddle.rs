@@ -1,10 +1,11 @@
-use amethyst::core::{Transform, SystemDesc};
-use amethyst::derive::SystemDesc;
-use amethyst::ecs::{Join, Read, ReadStorage, System, SystemData, World, WriteStorage};
-use amethyst::input::{InputHandler, StringBindings};
+use amethyst::{
+    core::Transform,
+    derive::SystemDesc,
+    ecs::{Join, Read, ReadStorage, System, SystemData, WriteStorage},
+    input::{InputHandler, StringBindings}
+};
 
 use crate::{
-    state::Pong,
     components::{Side, Paddle},
     constants::{ARENA_HEIGHT, PADDLE_HEIGHT}
 };
