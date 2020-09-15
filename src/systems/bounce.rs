@@ -5,7 +5,7 @@ use amethyst::{
     },
     assets::AssetStorage,
     core::Transform,
-    ecs::{Join, Read, ReadExpect, ReadStorage, System, Write, WriteStorage},
+    ecs::{Join, Read, ReadExpect, ReadStorage, System, WriteStorage},
 };
 use crate::{
     components::{Ball, Side, Paddle},
