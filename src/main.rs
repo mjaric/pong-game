@@ -16,9 +16,12 @@ use amethyst::{
     ui::{RenderUi, UiBundle},
     input::{InputBundle, StringBindings},
     core::transform::TransformBundle,
-    audio::AudioBundle
+    audio::{AudioBundle, DjSystemDesc}
 };
-use crate::state::Pong;
+use crate::{
+    state::Pong,
+    audio::Music
+};
 
 fn main() -> amethyst::Result<()> {
     amethyst::start_logger(Default::default());
@@ -45,6 +48,7 @@ fn main() -> amethyst::Result<()> {
         .with_bundle(input_bundle)?
         .with_bundle(UiBundle::<StringBindings>::new())?
         .with_bundle(AudioBundle::default())?
+        .with_system_desc(DjSystemDesc::new(|music: &mut Music| music.music.next()), "dj_system", &[])
         .with(systems::PaddleSystem, "paddle_system", &["input_system"])
         .with(systems::MoveBallSystem, "ball_system", &[])
         .with(systems::BounceSystem, "collision_system", &["paddle_system", "ball_system"])
