@@ -13,12 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59c6b555-131e-4d34-acbd-5879124d2f48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ball.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/paddle.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/systems/bounce.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/systems/move_balls.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components.rs" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/Computer_Music_All-Stars_-_Albatross_v2.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/Computer_Music_All-Stars_-_Wheres_My_Jetpack.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/bounce.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/score.ogg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/font/square.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/systems/winner.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.rs" afterDir="false" />
@@ -54,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Cargo.toml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/font" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,7 +67,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/font" />
+    </key>
+  </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
       <option name="channel" value="DEFAULT" />
       <option name="command" value="run" />
@@ -76,11 +88,6 @@
       <envs />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -97,7 +104,8 @@
       <option name="presentableId" value="Default" />
       <updated>1600070192837</updated>
       <workItem from="1600070193863" duration="55000" />
-      <workItem from="1600070254833" duration="3257000" />
+      <workItem from="1600070254833" duration="3859000" />
+      <workItem from="1600164238283" duration="5328000" />
     </task>
     <servers />
   </component>
@@ -109,22 +117,22 @@
       <screen x="0" y="33" width="3840" height="2076" />
     </state>
     <state x="329" y="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.33.3840.2076@0.33.3840.2076" timestamp="1600070279692" />
-    <state width="1688" height="599" key="GridCell.Tab.0.bottom" timestamp="1600073716842">
+    <state width="1641" height="599" key="GridCell.Tab.0.bottom" timestamp="1600172482162">
       <screen x="0" y="33" width="3840" height="2076" />
     </state>
-    <state width="1688" height="599" key="GridCell.Tab.0.bottom/0.33.3840.2076@0.33.3840.2076" timestamp="1600073716842" />
-    <state width="1688" height="599" key="GridCell.Tab.0.center" timestamp="1600073716842">
+    <state width="1641" height="599" key="GridCell.Tab.0.bottom/0.33.3840.2076@0.33.3840.2076" timestamp="1600172482162" />
+    <state width="1641" height="599" key="GridCell.Tab.0.center" timestamp="1600172482160">
       <screen x="0" y="33" width="3840" height="2076" />
     </state>
-    <state width="1688" height="599" key="GridCell.Tab.0.center/0.33.3840.2076@0.33.3840.2076" timestamp="1600073716842" />
-    <state width="1688" height="599" key="GridCell.Tab.0.left" timestamp="1600073716841">
+    <state width="1641" height="599" key="GridCell.Tab.0.center/0.33.3840.2076@0.33.3840.2076" timestamp="1600172482160" />
+    <state width="1641" height="599" key="GridCell.Tab.0.left" timestamp="1600172482159">
       <screen x="0" y="33" width="3840" height="2076" />
     </state>
-    <state width="1688" height="599" key="GridCell.Tab.0.left/0.33.3840.2076@0.33.3840.2076" timestamp="1600073716841" />
-    <state width="1688" height="599" key="GridCell.Tab.0.right" timestamp="1600073716842">
+    <state width="1641" height="599" key="GridCell.Tab.0.left/0.33.3840.2076@0.33.3840.2076" timestamp="1600172482159" />
+    <state width="1641" height="599" key="GridCell.Tab.0.right" timestamp="1600172482161">
       <screen x="0" y="33" width="3840" height="2076" />
     </state>
-    <state width="1688" height="599" key="GridCell.Tab.0.right/0.33.3840.2076@0.33.3840.2076" timestamp="1600073716842" />
+    <state width="1641" height="599" key="GridCell.Tab.0.right/0.33.3840.2076@0.33.3840.2076" timestamp="1600172482161" />
     <state x="721" y="881" width="307" height="377" key="cloudConfig.SelfSettingsDialog" timestamp="1600070228680">
       <screen x="0" y="33" width="3840" height="2076" />
     </state>
