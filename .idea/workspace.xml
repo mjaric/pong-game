@@ -13,13 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59c6b555-131e-4d34-acbd-5879124d2f48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/audio.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/state.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/systems/bounce.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/systems/bounce.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/systems/move_balls.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/systems/move_balls.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/systems/paddle.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/systems/paddle.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/systems/winner.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/systems/winner.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,10 +66,10 @@
       <recent name="$PROJECT_DIR$/assets/font" />
     </key>
   </component>
-  <component name="RunManager" selected="Cargo Command.build">
+  <component name="RunManager" selected="Cargo Command.Run">
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
       <option name="channel" value="DEFAULT" />
-      <option name="command" value="run" />
+      <option name="command" value="run --no-default-features --features=&quot;metal&quot;" />
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="backtrace" value="SHORT" />
@@ -98,6 +96,10 @@
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Cargo Command.build" />
+      <item itemvalue="Cargo Command.Run" />
+    </list>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -114,7 +116,7 @@
       <workItem from="1600070193863" duration="55000" />
       <workItem from="1600070254833" duration="3859000" />
       <workItem from="1600164238283" duration="5328000" />
-      <workItem from="1600183565532" duration="792000" />
+      <workItem from="1600183565532" duration="1689000" />
     </task>
     <servers />
   </component>
@@ -122,30 +124,30 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="165" y="393" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600184112794">
+    <state x="165" y="393" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600185087148">
       <screen x="0" y="23" width="1920" height="1131" />
     </state>
-    <state x="165" y="393" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1131@0.23.1920.1131" timestamp="1600184112794" />
+    <state x="165" y="393" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1131@0.23.1920.1131" timestamp="1600185087148" />
     <state x="329" y="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.33.3840.2076@0.33.3840.2076" timestamp="1600070279692" />
-    <state width="1878" height="314" key="GridCell.Tab.0.bottom" timestamp="1600184518611">
+    <state width="1878" height="314" key="GridCell.Tab.0.bottom" timestamp="1600185090120">
       <screen x="0" y="23" width="1920" height="1131" />
     </state>
-    <state width="1878" height="314" key="GridCell.Tab.0.bottom/0.23.1920.1131@0.23.1920.1131" timestamp="1600184518611" />
+    <state width="1878" height="314" key="GridCell.Tab.0.bottom/0.23.1920.1131@0.23.1920.1131" timestamp="1600185090120" />
     <state width="1641" height="599" key="GridCell.Tab.0.bottom/0.33.3840.2076@0.33.3840.2076" timestamp="1600172482162" />
-    <state width="1878" height="314" key="GridCell.Tab.0.center" timestamp="1600184518610">
+    <state width="1878" height="314" key="GridCell.Tab.0.center" timestamp="1600185090120">
       <screen x="0" y="23" width="1920" height="1131" />
     </state>
-    <state width="1878" height="314" key="GridCell.Tab.0.center/0.23.1920.1131@0.23.1920.1131" timestamp="1600184518610" />
+    <state width="1878" height="314" key="GridCell.Tab.0.center/0.23.1920.1131@0.23.1920.1131" timestamp="1600185090120" />
     <state width="1641" height="599" key="GridCell.Tab.0.center/0.33.3840.2076@0.33.3840.2076" timestamp="1600172482160" />
-    <state width="1878" height="314" key="GridCell.Tab.0.left" timestamp="1600184518610">
+    <state width="1878" height="314" key="GridCell.Tab.0.left" timestamp="1600185090119">
       <screen x="0" y="23" width="1920" height="1131" />
     </state>
-    <state width="1878" height="314" key="GridCell.Tab.0.left/0.23.1920.1131@0.23.1920.1131" timestamp="1600184518610" />
+    <state width="1878" height="314" key="GridCell.Tab.0.left/0.23.1920.1131@0.23.1920.1131" timestamp="1600185090119" />
     <state width="1641" height="599" key="GridCell.Tab.0.left/0.33.3840.2076@0.33.3840.2076" timestamp="1600172482159" />
-    <state width="1878" height="314" key="GridCell.Tab.0.right" timestamp="1600184518611">
+    <state width="1878" height="314" key="GridCell.Tab.0.right" timestamp="1600185090120">
       <screen x="0" y="23" width="1920" height="1131" />
     </state>
-    <state width="1878" height="314" key="GridCell.Tab.0.right/0.23.1920.1131@0.23.1920.1131" timestamp="1600184518611" />
+    <state width="1878" height="314" key="GridCell.Tab.0.right/0.23.1920.1131@0.23.1920.1131" timestamp="1600185090120" />
     <state width="1641" height="599" key="GridCell.Tab.0.right/0.33.3840.2076@0.33.3840.2076" timestamp="1600172482161" />
     <state x="721" y="881" width="307" height="377" key="cloudConfig.SelfSettingsDialog" timestamp="1600070228680">
       <screen x="0" y="33" width="3840" height="2076" />

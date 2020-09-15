@@ -1,12 +1,18 @@
-use crate::{components::{
-    initialize_paddles,
-    load_sprite_sheet,
-    initialize_ball
-}, constants::{ARENA_WIDTH, ARENA_HEIGHT}, ui};
 use amethyst::{
     core::transform::Transform,
     prelude::*,
-    renderer::Camera
+    renderer::Camera,
+};
+
+use crate::{
+    audio,
+    components::{
+        initialize_ball,
+        initialize_paddles,
+        load_sprite_sheet,
+    },
+    constants::{ARENA_HEIGHT, ARENA_WIDTH},
+    ui,
 };
 
 pub struct Pong;
@@ -19,6 +25,7 @@ impl SimpleState for Pong {
         initialize_paddles(world, sprite_sheet_handle);
         initialize_camera(world);
         ui::initialize_scoreboard(world);
+        audio::initialize_audio(world);
     }
 }
 
