@@ -37,7 +37,8 @@ impl Component for Paddle {
 pub fn initialize_paddles(world: &mut World, sprite_sheet_handle: Handle<SpriteSheet>) {
     let mut left_transform = Transform::default();
     let mut right_transform = Transform::default();
-    let sprite_render = SpriteRender::new(sprite_sheet_handle, 0);
+    let sprite_render_left = SpriteRender::new(sprite_sheet_handle.clone(), 0);
+    let sprite_render_right = SpriteRender::new(sprite_sheet_handle, 2);
 
     let y = constants::ARENA_HEIGHT / 2.0;
     left_transform.set_translation_xyz(constants::PADDLE_WIDTH * 0.5, y, 0.0);
@@ -45,14 +46,14 @@ pub fn initialize_paddles(world: &mut World, sprite_sheet_handle: Handle<SpriteS
 
     world
         .create_entity()
-        .with(sprite_render.clone())
+        .with(sprite_render_left)
         .with(Paddle::new(Side::Left))
         .with(left_transform)
         .build();
 
     world
         .create_entity()
-        .with(sprite_render)
+        .with(sprite_render_right)
         .with(Paddle::new(Side::Right))
         .with(right_transform)
         .build();

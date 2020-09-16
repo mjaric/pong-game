@@ -18,11 +18,11 @@ pub fn initialize_scoreboard(world: &mut World) {
     let font = world.read_resource::<Loader>()
         .load("font/square.ttf", TtfFormat, (), &world.read_resource());
     let left_transform = UiTransform::new(
-        "Player 1".to_string(), Anchor::TopMiddle, Anchor::TopMiddle,
+        "player_1_score".to_string(), Anchor::TopMiddle, Anchor::TopMiddle,
         -50.0, -50.0, 1.0, 200.0, 50.0
     );
     let right_transform = UiTransform::new(
-        "Player 1".to_string(), Anchor::TopMiddle, Anchor::TopMiddle,
+        "player_2_score".to_string(), Anchor::TopMiddle, Anchor::TopMiddle,
         50.0, -50.0, 1.0, 200.0, 50.0
     );
 
