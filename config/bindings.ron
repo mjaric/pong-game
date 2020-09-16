@@ -2,6 +2,7 @@
   axes: {
     "left_paddle": Emulated(pos: Key(W), neg: Key(S)),
     "right_paddle": Emulated(pos: Key(Up), neg: Key(Down)),
+    "right_paddle_sdl": Controller(controller_id: 0, axis: RightY, invert: true, dead_zone: 0.0),
   },
   actions: {},
 )
